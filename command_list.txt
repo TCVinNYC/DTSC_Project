@@ -1,0 +1,11 @@
+# Upload script to cluster
+scp -i /Users/prince/Desktop/SSH\\ Key\\ pair1.pem /Users/prince/Desktop/spark_cali_housing.py hadoop@ec2-18-119-157-26.us-east-2.compute.amazonaws.com:/home/hadoop\
+
+# SSH into cluster
+ssh -i /Users/prince/Desktop/SSH\\ Key\\ pair1.pem hadoop@ec2-18-119-157-26.us-east-2.compute.amazonaws.com
+
+# Install requirements
+pip install boto3 pyspark
+
+# Run python script in cluster
+spark-submit spark_cali_housing.py
